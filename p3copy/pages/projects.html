@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="../js/script.js"></script>
+</head>
+<body>
+    <div class="box">
+    <header>
+        <h1 class="title">ATLAS USIC</h1>
+        <nav class="navigation">
+            <div class="bar bar--about"><a href="./index.html">About</a></div>
+            <!--might change "./about.html" to "#" to point it at an id to go somewhere on the page.  -->
+            <br />
+            <div class="bar bar--projects">
+              <a href="./projects.html">Porfolio</a>
+            </div>
+            <br />
+            <div class="bar bar--contact">
+              <a href="./contact.html">Contact me</a>
+        </nav>
+    </header>
+    <main>
+        <div class="side side--left" id="left">
+            
+        </div>
+        <div class="inner">
+            <div class="content">
+                <div id="text"><p>
+                Here are some of the projects I've worked on.
+              </p>
+              <button id="project1" onclick="document.getElementById('pic').src ='../images/sneepsnorp.png'">Project 1</button>
+              <button id="project2" onclick="document.getElementById('pic').src ='../images/portrait2.jpg'">Project 2</button>
+              <button id="project3" onclick="document.getElementById('pic').src ='../images/project3.jpg'">Project 3</button>
+            </div>
+              <div id="image">
+                <img src="../images/portrait.jpg" id="pic">
+              </div>
+            </div>
+        </div>
+        <div class="side side--right" id="right"></div>
+    </main>
+    <footer></footer>
+</div>
+</body>
+</html>
