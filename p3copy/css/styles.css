@@ -5,6 +5,54 @@ body {
   background-color: #f8f7ff;
   background-image: url(../images/background.jpg);
   background-size: 100vw;
+  background-attachment: fixed;
+}
+
+.splash {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #ff692d;
+  z-index: 200;
+  text-align: center;
+  line-height: 90vh;
+}
+.splash h1 {
+  font-size: 5em;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #ffffff;
+  transform: rotate(8deg) scale(1.2) skew(24deg) translate(-100px, 18px);
+}
+
+.splash.display-none {
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #ff692d;
+  z-index: -10;
+  text-align: center;
+  line-height: 90vh;
+}
+.splash.display-none h1 {
+  font-size: 5em;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #ffffff;
+  transform: rotate(8deg) scale(1.2) skew(24deg) translate(-100px, 18px);
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards;
 }
 
 .box {
@@ -32,9 +80,9 @@ header {
   height: 20vh;
   padding-bottom: 10px;
   background: #ff692d;
-  background: linear-gradient(0deg, #ff692d 0%, #ff692d 45%, #ffbd2d 90%);
+  background: linear-gradient(0deg, #ff692d 0%, #ff692d 45%, #ffa82e 90%);
   border-radius: 62px 0px 0px 0px;
-  box-shadow: 10px 10px 17px 2px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 15px 17px 2px rgba(0, 0, 0, 0.75);
 }
 @media screen and (min-width: 300px) {
   header {
@@ -75,7 +123,7 @@ main {
   height: 70vh;
   background-color: #ffffff;
   border-radius: 0px 0px 62px 0px;
-  box-shadow: 10px 10px 17px 2px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 25px 17px 2px rgba(0, 0, 0, 0.75);
 }
 @media screen and (min-width: 300px) {
   main {
@@ -128,7 +176,7 @@ main {
   background-color: #ffffff;
 }
 
-h1 {
+header > h1 {
   padding-top: 0vh;
   margin-bottom: 1vh;
   height: fit-content;
@@ -137,32 +185,32 @@ h1 {
   transform: rotate(8deg) scale(1.2) skew(24deg) translate(-200px, 18px);
 }
 @media screen and (min-width: 300px) {
-  h1 {
+  header > h1 {
     font-size: 2.5em;
   }
 }
 @media screen and (min-width: 360px) {
-  h1 {
+  header > h1 {
     font-size: 3em;
   }
 }
 @media screen and (min-width: 566px) {
-  h1 {
+  header > h1 {
     font-size: 3em;
   }
 }
 @media screen and (min-width: 768px) {
-  h1 {
+  header > h1 {
     font-size: 5em;
   }
 }
 @media screen and (min-width: 1024px) {
-  h1 {
+  header > h1 {
     font-size: 4em;
   }
 }
 @media screen and (min-width: 1440px) {
-  h1 {
+  header > h1 {
     font-size: 5em;
   }
 }
