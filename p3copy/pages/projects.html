@@ -6,44 +6,55 @@
     <title>Document</title>
     <link rel="stylesheet" href="../css/styles.css">
     <script src="../js/script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="box">
     <header>
         <h1 class="title">ATLAS USIC</h1>
         <nav class="navigation">
-            <div class="bar bar--about"><a href="./index.html">About</a></div>
-            <!--might change "./about.html" to "#" to point it at an id to go somewhere on the page.  -->
+            <div class="bar bar--about"><a href="./about.html">About</a>
+            </div>      
             <br />
             <div class="bar bar--projects">
               <a href="./projects.html">Porfolio</a>
             </div>
             <br />
             <div class="bar bar--contact">
-              <a href="./contact.html">Contact me</a>
-        </nav>
+              <a href="./contact.html">Contact me</a></nav>
+            
     </header>
     <main>
         <div class="side side--left" id="left">
             
         </div>
         <div class="inner">
-            <div class="content">
-                <div id="text"><p>
-                Here are some of the projects I've worked on.
-              </p>
-              <button id="project1" onclick="document.getElementById('pic').src ='../images/sneepsnorp.png'">Project 1</button>
-              <button id="project2" onclick="document.getElementById('pic').src ='../images/portrait2.jpg'">Project 2</button>
-              <button id="project3" onclick="document.getElementById('pic').src ='../images/project3.jpg'">Project 3</button>
-            </div>
+            <div class="content content--proj">
               <div id="image">
-                <img src="../images/portrait.jpg" id="pic">
+                <img src="../images/placeholder1.jpg" id="proj-pic">
               </div>
+                <div id="text">
+                  <span id="projInfo">
+              <h3 id="projTitle">Project Title</h3>
+              <p>This is a short description about the project I worked on, including the skills and techniques used to create the project</p>
+            </span>
+              <span id="btn">
+              <button class="button button--proj" id="project1" onclick="document.getElementById('proj-pic').src ='../images/placeholder2.jpg'">FakeOS</button>
+              <button class="button button--proj" id="project2" onclick="document.getElementById('proj-pic').src ='../images/placeholder3.jpg'">Morse Code</button>
+              <button class="button button--proj" id="project3" onclick="document.getElementById('proj-pic').src ='../images/placeholder4.jpg'">API Search Engine</button>
+              <button class="button button--proj" id="project4" onclick="document.getElementById('proj-pic').src ='../images/placeholder5.jpg'">E-commerce</button>
+              <button class="button button--proj" id="project5" onclick="document.getElementById('proj-pic').src ='../images/placeholder6.jpg'">Java CLI App</button>
+            </span>
+            </div>
+              
             </div>
         </div>
         <div class="side side--right" id="right"></div>
     </main>
-    <footer></footer>
+    <footer><p>Photo by <a href="https://unsplash.com/@parisbilal?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Paris Bilal</a> on <a href="https://unsplash.com/photos/a-blue-and-white-abstract-painting-of-a-womans-face-SpM6hfYI3u8?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+    </p></footer>
 </div>
 </body>
 </html>

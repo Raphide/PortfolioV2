@@ -4,8 +4,12 @@ body {
   justify-content: center;
   background-color: #f8f7ff;
   background-image: url(../images/background.jpg);
-  background-size: 100vw;
+  background-repeat: no-repeat;
   background-attachment: fixed;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  margin: 0.5em 0em 0em 0em;
 }
 
 .splash {
@@ -21,9 +25,10 @@ body {
 }
 .splash h1 {
   font-size: 5em;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
   color: #ffffff;
-  transform: rotate(8deg) scale(1.2) skew(24deg) translate(-100px, 18px);
 }
 
 .splash.display-none {
@@ -37,12 +42,14 @@ body {
   z-index: -10;
   text-align: center;
   line-height: 90vh;
+  transition: all 0.5s;
 }
 .splash.display-none h1 {
   font-size: 5em;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
   color: #ffffff;
-  transform: rotate(8deg) scale(1.2) skew(24deg) translate(-100px, 18px);
 }
 
 @keyframes fadeIn {
@@ -59,8 +66,14 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  height: 80%;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (max-width: 350px) {
+  .box {
+    margin: 0em 1em 0em 1em;
+  }
+}
+@media screen and (min-width: 1200px) {
   .box {
     margin: 0vh 2vw 0vh 2vw;
   }
@@ -76,7 +89,7 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 90vw;
+  width: 95vw;
   height: 20vh;
   padding-bottom: 10px;
   background: #ff692d;
@@ -84,19 +97,9 @@ header {
   border-radius: 62px 0px 0px 0px;
   box-shadow: 10px 15px 17px 2px rgba(0, 0, 0, 0.75);
 }
-@media screen and (min-width: 300px) {
+@media screen and (max-width: 350px) {
   header {
-    height: 35vh;
-  }
-}
-@media screen and (min-width: 360px) {
-  header {
-    height: 35vh;
-  }
-}
-@media screen and (min-width: 566px) {
-  header {
-    height: 30vh;
+    height: 25vh;
   }
 }
 @media screen and (min-width: 768px) {
@@ -104,7 +107,12 @@ header {
     height: 30vh;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 992px) {
+  header {
+    height: 30vh;
+  }
+}
+@media screen and (min-width: 1200px) {
   header {
     height: 20vh;
   }
@@ -119,33 +127,29 @@ main {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  width: 90vw;
+  width: 95vw;
   height: 70vh;
   background-color: #ffffff;
   border-radius: 0px 0px 62px 0px;
   box-shadow: 10px 25px 17px 2px rgba(0, 0, 0, 0.75);
 }
-@media screen and (min-width: 300px) {
+@media screen and (max-width: 350px) {
   main {
     height: 65vh;
-  }
-}
-@media screen and (min-width: 360px) {
-  main {
-    height: 65vh;
-  }
-}
-@media screen and (min-width: 566px) {
-  main {
-    height: 70vh;
+    justify-content: space-between;
   }
 }
 @media screen and (min-width: 768px) {
   main {
+    height: 65vh;
+  }
+}
+@media screen and (min-width: 992px) {
+  main {
     height: 70vh;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1200px) {
   main {
     height: 80vh;
   }
@@ -161,6 +165,12 @@ main {
   width: 15%;
   background-color: #ffffff;
 }
+@media screen and (max-width: 350px) {
+  .side {
+    background-color: #ffffff;
+    width: 0%;
+  }
+}
 
 #right {
   border-radius: 0px 0px 62px 0px;
@@ -169,42 +179,48 @@ main {
 #left {
   background-color: #ff692d;
 }
+@media screen and (max-width: 350px) {
+  #left {
+    background-color: #ffffff;
+  }
+}
 
 .inner {
   height: 100%;
-  width: 70%;
+  width: 100%;
   background-color: #ffffff;
+}
+@media screen and (max-width: 350px) {
+  .inner {
+    border-radius: 0px 0px 62px 0px;
+  }
 }
 
 header > h1 {
   padding-top: 0vh;
-  margin-bottom: 1vh;
+  margin-bottom: 0em;
   height: fit-content;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
   color: #ffffff;
-  transform: rotate(8deg) scale(1.2) skew(24deg) translate(-200px, 18px);
 }
-@media screen and (min-width: 300px) {
-  header > h1 {
-    font-size: 2.5em;
-  }
-}
-@media screen and (min-width: 360px) {
-  header > h1 {
-    font-size: 3em;
-  }
-}
-@media screen and (min-width: 566px) {
+@media screen and (max-width: 350px) {
   header > h1 {
     font-size: 3em;
   }
 }
 @media screen and (min-width: 768px) {
   header > h1 {
-    font-size: 5em;
+    font-size: 3em;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 992px) {
+  header > h1 {
+    font-size: 3em;
+  }
+}
+@media screen and (min-width: 1200px) {
   header > h1 {
     font-size: 4em;
   }
@@ -220,47 +236,43 @@ nav {
   flex-direction: row;
   justify-content: space-around;
 }
-
-nav > .bar {
+nav .bar {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-end;
-  padding: 1vh 1vw 1vh 1vw;
+  padding: 0em 1em 1em 1em;
 }
-
 nav a {
   color: #ffffff;
   text-decoration: none;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
   font-size: 1em;
   height: fit-content;
+  padding-bottom: 1em;
+  padding-top: 0em;
 }
-@media screen and (min-width: 300px) {
+@media screen and (max-width: 350px) {
   nav a {
-    font-size: 1.5em;
+    font-size: 1.19em;
     padding-top: 1em;
   }
 }
-@media screen and (min-width: 360px) {
-  nav a {
-    font-size: 1.5em;
-    padding-top: 0px;
-  }
-}
-@media screen and (min-width: 566px) {
+@media screen and (min-width: 768px) {
   nav a {
     font-size: 1em;
     padding-top: 0px;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   nav a {
     font-size: 2em;
     padding-top: 0px;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1200px) {
   nav a {
     font-size: 1.75em;
     padding-top: 0px;
@@ -272,53 +284,71 @@ nav a {
     padding-top: 1em;
   }
 }
-nav a:hover {
-  transform: rotate(8deg) scale(1.3) skew(11deg);
-  size: 175%;
-  transition: all 0.2s ease;
-}
 
 .content {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   margin: 0% 10% 0% 10%;
 }
-
-#image {
-  height: 50vh;
-  width: 50vw;
-  background-color: #ffbd2d;
+@media screen and (max-width: 350px) {
+  .content {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0% 5% 0% 5%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .content {
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0% 5% 0% 5%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0% 5% 0% 5%;
+  }
+}
+.content--contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.content--proj {
+  flex-direction: column;
 }
 
 p {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
   font-size: 1em;
 }
-@media screen and (min-width: 300px) {
+@media screen and (max-width: 350px) {
   p {
-    font-size: 0.75em;
+    font-size: 0.85em;
   }
 }
-@media screen and (min-width: 360px) {
-  p {
-    font-size: 0.75em;
-    padding-top: 0px;
-  }
-}
-@media screen and (min-width: 566px) {
+@media screen and (min-width: 768px) {
   p {
     font-size: 1.15em;
     padding-top: 0px;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   p {
     font-size: 1em;
     padding-top: 0px;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1200px) {
   p {
     font-size: 1em;
     padding-top: 0px;
@@ -329,6 +359,15 @@ p {
     font-size: 1em;
     padding-top: 1em;
   }
+}
+
+#text {
+  display: flex;
+  flex-direction: row;
+}
+
+#btn {
+  margin-top: 1em;
 }
 
 img {
@@ -348,14 +387,102 @@ img {
   }
 }
 
-button {
+.button {
   background-color: #ff692d;
   color: #f8f7ff;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
   font-size: 1em;
   padding: 0.5em 0.75em 0.5em 0.75em;
   border: none;
   border-radius: 30px;
+}
+.button--proj {
+  height: 3em;
+  width: 10em;
+}
+@media screen and (max-width: 350px) {
+  .button--proj {
+    font-size: 1em;
+    height: fit-content;
+    padding: 0.2em 0.5em 0.2em 0.5em;
+    margin-bottom: 0.25em;
+  }
+}
+h3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  margin-top: 1em;
+  margin-bottom: 0em;
+}
+
+.icon {
+  height: 10vh;
+  color: #ff692d;
+}
+
+.content-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1em;
+}
+form label {
+  margin: 0;
+}
+form input {
+  margin: 0;
+  height: 1em;
+}
+form textarea {
+  width: 90%;
+  height: 40%;
+}
+form .button--submit {
+  margin-top: 0.5em;
+}
+
+@media screen and (max-width: 350px) {
+  #proj-pic {
+    max-height: 30vh;
+    max-width: 80vw;
+  }
+}
+#weblinks {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+@media screen and (max-width: 350px) {
+  #portrait {
+    max-height: 40vh;
+    max-width: 50vw;
+  }
+}
+footer {
+  background-color: #ffffff;
+  opacity: 0.5;
+  margin-top: 0.25em;
+  padding: 0.5em 0em 0.5em 0.5em;
+  border-radius: 5px 5px 5px 5px;
+  max-width: 70%;
+  height: 1em;
+}
+footer p {
+  margin: 0;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -6,8 +6,12 @@ body {
   justify-content: center;
   background-color: #f8f7ff;
   background-image: url(../images/background.jpg);
-  background-size: 100vw;
+  background-repeat: no-repeat;
   background-attachment: fixed;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  margin: 0.5em 0em 0em 0em;
 }
 
 .splash {
@@ -22,9 +26,11 @@ body {
   line-height: 90vh;
   h1 {
     font-size: 5em;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
     color: #ffffff;
-    transform: rotate(8deg) scale(1.2) skew(24deg) translate(-100px, 18px);
+    // transform: rotate(8deg) scale(1.2) skew(24deg) translate(-100px, 18px);
   }
 }
 
@@ -41,10 +47,13 @@ body {
   line-height: 90vh;
   h1 {
     font-size: 5em;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
     color: #ffffff;
-    transform: rotate(8deg) scale(1.2) skew(24deg) translate(-100px, 18px);
+    // transform: rotate(8deg) scale(1.2) skew(24deg) translate(-100px, 18px);
   }
+  transition: all 0.5s;
 }
 
 @keyframes fadeIn {
@@ -62,6 +71,10 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  height: 80%;
+  @include q.phone {
+    margin: 0em 1em 0em 1em;
+  }
 
   @include q.laptop {
     margin: 0vh 2vw 0vh 2vw;
@@ -77,7 +90,7 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 90vw;
+  width: 95vw;
   height: 20vh;
   padding-bottom: 10px;
   background: #ff692d;
@@ -85,18 +98,15 @@ header {
   border-radius: 62px 0px 0px 0px;
   box-shadow: 10px 15px 17px 2px rgba(0, 0, 0, 0.75);
 
-  @include q.small-phone {
-    height: 35vh;
-  }
-
   @include q.phone {
-    height: 35vh;
-  }
-  @include q.large-phone {
-    height: 30vh;
+    height: 25vh;
   }
 
   @include q.tablet {
+    height: 30vh;
+  }
+
+  @include q.tablet-port {
     height: 30vh;
   }
 
@@ -113,24 +123,21 @@ main {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  width: 90vw;
+  width: 95vw;
   height: 70vh;
   background-color: #ffffff;
   border-radius: 0px 0px 62px 0px;
   box-shadow: 10px 25px 17px 2px rgba(0, 0, 0, 0.75);
 
-  @include q.small-phone {
-    height: 65vh;
-  }
-
   @include q.phone {
     height: 65vh;
-  }
-  @include q.large-phone {
-    height: 70vh;
+    justify-content: space-between;
   }
 
   @include q.tablet {
+    height: 65vh;
+  }
+  @include q.tablet-port {
     height: 70vh;
   }
 
@@ -147,6 +154,11 @@ main {
   height: 100%;
   width: 15%;
   background-color: #ffffff;
+
+  @include q.phone {
+    background-color: #ffffff;
+    width: 0%;
+  }
 }
 
 #right {
@@ -155,35 +167,39 @@ main {
 
 #left {
   background-color: #ff692d;
+  @include q.phone {
+    background-color: #ffffff;
+  }
 }
 
 .inner {
   height: 100%;
-  width: 70%;
+  width: 100%;
   background-color: #ffffff;
+  @include q.phone {
+    border-radius: 0px 0px 62px 0px;
+  }
 }
 
 header > h1 {
   padding-top: 0vh;
-  margin-bottom: 1vh;
+  margin-bottom: 0em;
   height: fit-content;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
   color: #ffffff;
-  transform: rotate(8deg) scale(1.2) skew(24deg) translate(-200px, 18px);
-
-  @include q.small-phone {
-    font-size: 2.5em;
-  }
+  // transform: rotate(8deg) scale(1.2) skew(24deg) translate(-200px, 18px);
 
   @include q.phone {
     font-size: 3em;
   }
-  @include q.large-phone {
-    font-size: 3em;
-  }
 
   @include q.tablet {
-    font-size: 5em;
+    font-size: 3em;
+  }
+  @include q.tablet-port {
+    font-size: 3em;
   }
 
   @include q.laptop {
@@ -199,88 +215,109 @@ nav {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-}
-
-nav > .bar {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-end;
-  padding: 1vh 1vw 1vh 1vw;
-}
-
-nav a {
-  color: #ffffff;
-  text-decoration: none;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  font-size: 1em;
-  height: fit-content;
-
-  @include q.small-phone {
-    font-size: 1.5em;
-    padding-top: 1em;
+  .bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0em 1em 1em 1em;
   }
-
-  @include q.phone {
-    font-size: 1.5em;
-    padding-top: 0px;
-  }
-  @include q.large-phone {
+  a {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     font-size: 1em;
-    padding-top: 0px;
-  }
+    height: fit-content;
+    padding-bottom: 1em;
+    padding-top: 0em;
 
-  @include q.tablet {
-    font-size: 2em;
-    padding-top: 0px;
-  }
+    @include q.phone {
+      font-size: 1.19em;
+      padding-top: 1em;
+    }
 
-  @include q.laptop {
-    font-size: 1.75em;
-    padding-top: 0px;
-  }
+    @include q.tablet {
+      font-size: 1em;
+      padding-top: 0px;
+    }
 
-  @include q.desktop {
-    font-size: 2.5em;
-    padding-top: 1em;
-  }
-  &:hover {
-    transform: rotate(8deg) scale(1.3) skew(11deg);
-    size: 175%;
-    transition: all 0.2s ease;
+    @include q.tablet-port {
+      font-size: 2em;
+      padding-top: 0px;
+    }
+
+    @include q.laptop {
+      font-size: 1.75em;
+      padding-top: 0px;
+    }
+
+    @include q.desktop {
+      font-size: 2.5em;
+      padding-top: 1em;
+    }
+    // &:hover {
+    //   transform: rotate(8deg) scale(1.3) skew(11deg);
+    //   transition: all 0.2s ease;
+    // }
   }
 }
 
 .content {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   margin: 0% 10% 0% 10%;
-}
 
-#image {
-  height: 50vh;
-  width: 50vw;
-  background-color: #ffbd2d;
+  @include q.phone {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0% 5% 0% 5%;
+  }
+
+  @include q.tablet {
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0% 5% 0% 5%;
+  }
+
+  @include q.laptop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0% 5% 0% 5%;
+  }
+
+  &--contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  &--proj {
+    flex-direction: column;
+  }
 }
 
 p {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
   font-size: 1em;
-  @include q.small-phone {
-    font-size: 0.75em;
-  }
 
   @include q.phone {
-    font-size: 0.75em;
-    padding-top: 0px;
+    font-size: 0.85em;
   }
-  @include q.large-phone {
+
+  @include q.tablet {
     font-size: 1.15em;
     padding-top: 0px;
   }
 
-  @include q.tablet {
+  @include q.tablet-port {
     font-size: 1em;
     padding-top: 0px;
   }
@@ -294,6 +331,15 @@ p {
     font-size: 1em;
     padding-top: 1em;
   }
+}
+
+#text {
+  display: flex;
+  flex-direction: row;
+}
+
+#btn {
+  margin-top: 1em;
 }
 
 img {
@@ -314,12 +360,138 @@ img {
   }
 }
 
-button {
+.button {
   background-color: #ff692d;
   color: #f8f7ff;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
   font-size: 1em;
-  padding:  0.5em 0.75em 0.5em 0.75em;
+  padding: 0.5em 0.75em 0.5em 0.75em;
   border: none;
   border-radius: 30px;
+  &--proj {
+    height: 3em;
+    width: 10em;
+
+    @include q.phone {
+      font-size: 1em;
+      height: fit-content;
+      padding: 0.2em 0.5em 0.2em 0.5em;
+      margin-bottom: 0.25em;
+    }
+
+    @include q.tablet {
+    }
+
+    @include q.tablet-port {
+    }
+
+    @include q.laptop {
+    }
+
+    @include q.desktop {
+    }
+  }
+}
+
+h3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  margin-top: 1em;
+  margin-bottom: 0em;
+}
+
+.icon {
+  height: 10vh;
+  color: #ff692d;
+}
+
+.content-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1em;
+  label {
+    margin: 0;
+  }
+  input {
+    margin: 0;
+    height: 1em;
+  }
+  textarea {
+    width: 90%;
+    height: 40%;
+  }
+  .button--submit {
+    margin-top: 0.5em;
+  }
+}
+
+#proj-pic {
+  @include q.phone {
+    max-height: 30vh;
+    max-width: 80vw;
+  }
+
+  @include q.tablet {
+  }
+
+  @include q.tablet-port {
+  }
+
+  @include q.laptop {
+  }
+
+  @include q.desktop {
+  }
+}
+
+#weblinks {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+#portrait {
+  @include q.phone {
+    max-height: 40vh;
+    max-width: 50vw;
+  }
+
+  @include q.tablet {
+  }
+
+  @include q.tablet-port {
+  }
+
+  @include q.laptop {
+  }
+
+  @include q.desktop {
+  }
+}
+
+footer {
+  background-color: #ffffff;
+  opacity: 0.5;
+  margin-top: 0.25em;
+  padding: 0.5em 0em 0.5em 0.5em;
+  border-radius: 5px 5px 5px 5px;
+  max-width: 70%;
+  height: 1em;
+  p {
+    margin: 0;
+  }
 }

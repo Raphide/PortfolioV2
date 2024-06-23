@@ -1,24 +1,17 @@
-$tiny: 300px;
-$xxs: 360px;
-$xs: 566px;
+$xxs: 350px;
+$xs: 390px;
 $sm: 768px;
-$md: 820px;
-$lg: 1024px;
+$md: 992px;
+$lg: 1200px;
 $xl: 1440px;
 
-@mixin small-phone {
-    @media screen and (min-width: $tiny) {
-        @content;
-    }
-}
-
 @mixin phone {
-    @media screen and (min-width: $xxs) {
+    @media screen and (max-width: $xxs) {
         @content;
     }
 }
 
-@mixin large-phone {
+@mixin L-phone {
     @media screen and (min-width: $xs) {
         @content;
     }
@@ -30,12 +23,12 @@ $xl: 1440px;
     }
 }
 
-@mixin large-tablet {
+@mixin tablet-port {
     @media screen and (min-width: $md) {
         @content;
     }
-
 }
+
 @mixin laptop {
     @media screen and (min-width: $lg) {
         @content;
