@@ -68,19 +68,20 @@ body {
   justify-content: center;
   height: 80%;
 }
-@media screen and (max-width: 350px) {
+@media screen and (min-width: 350px) {
   .box {
     margin: 0em 1em 0em 1em;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .box {
-    margin: 0vh 2vw 0vh 2vw;
+    height: 70%;
+    margin: 2em 2em 1em 2em;
   }
 }
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1200px) {
   .box {
-    margin: 0vh 2vw 0vh 2vw;
+    margin: 2vh 4vw 0vh 4vw;
   }
 }
 
@@ -97,29 +98,101 @@ header {
   border-radius: 62px 0px 0px 0px;
   box-shadow: 10px 15px 17px 2px rgba(0, 0, 0, 0.75);
 }
-@media screen and (max-width: 350px) {
+@media screen and (min-width: 350px) {
   header {
     height: 25vh;
   }
 }
-@media screen and (min-width: 768px) {
-  header {
-    height: 30vh;
-  }
-}
-@media screen and (min-width: 992px) {
-  header {
-    height: 30vh;
-  }
-}
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 390px) {
   header {
     height: 20vh;
   }
 }
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 768px) {
   header {
-    height: 35vh;
+    height: 25vh;
+    width: 90vw;
+  }
+}
+@media screen and (min-width: 1200px) {
+  header {
+    height: 25vh;
+    width: 80vw;
+  }
+}
+header h1 {
+  padding-top: 0vh;
+  margin-bottom: 0em;
+  height: fit-content;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  color: #ffffff;
+}
+@media screen and (min-width: 350px) {
+  header h1 {
+    font-size: 3em;
+  }
+}
+@media screen and (min-width: 390px) {
+  header h1 {
+    font-size: 3.5em;
+  }
+}
+@media screen and (min-width: 768px) {
+  header h1 {
+    font-size: 5em;
+  }
+}
+@media screen and (min-width: 1200px) {
+  header h1 {
+    font-size: 4em;
+  }
+}
+header nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+header nav .bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0em 1em 1em 1em;
+}
+header nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1em;
+  height: fit-content;
+  padding-bottom: 1em;
+  padding-top: 0em;
+}
+@media screen and (min-width: 350px) {
+  header nav a {
+    font-size: 1.19em;
+    padding-top: 1em;
+  }
+}
+@media screen and (min-width: 390px) {
+  header nav a {
+    font-size: 1.3em;
+  }
+}
+@media screen and (min-width: 768px) {
+  header nav a {
+    font-size: 1.75em;
+    padding-top: 0px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  header nav a {
+    font-size: 1.75em;
+    padding-top: 0px;
   }
 }
 
@@ -133,30 +206,27 @@ main {
   border-radius: 0px 0px 62px 0px;
   box-shadow: 10px 25px 17px 2px rgba(0, 0, 0, 0.75);
 }
-@media screen and (max-width: 350px) {
+@media screen and (min-width: 350px) {
   main {
     height: 65vh;
     justify-content: space-between;
   }
 }
+@media screen and (min-width: 390px) {
+  main {
+    height: 72vh;
+  }
+}
 @media screen and (min-width: 768px) {
   main {
     height: 65vh;
-  }
-}
-@media screen and (min-width: 992px) {
-  main {
-    height: 70vh;
+    width: 90vw;
   }
 }
 @media screen and (min-width: 1200px) {
   main {
-    height: 80vh;
-  }
-}
-@media screen and (min-width: 1440px) {
-  main {
     height: 65vh;
+    width: 80vw;
   }
 }
 
@@ -165,10 +235,15 @@ main {
   width: 15%;
   background-color: #ffffff;
 }
-@media screen and (max-width: 350px) {
+@media screen and (min-width: 350px) {
   .side {
     background-color: #ffffff;
     width: 0%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .side {
+    width: 20%;
   }
 }
 
@@ -177,9 +252,9 @@ main {
 }
 
 #left {
-  background-color: #ff692d;
+  background-color: #ffffff;
 }
-@media screen and (max-width: 350px) {
+@media screen and (min-width: 350px) {
   #left {
     background-color: #ffffff;
   }
@@ -190,98 +265,9 @@ main {
   width: 100%;
   background-color: #ffffff;
 }
-@media screen and (max-width: 350px) {
+@media screen and (min-width: 350px) {
   .inner {
     border-radius: 0px 0px 62px 0px;
-  }
-}
-
-header > h1 {
-  padding-top: 0vh;
-  margin-bottom: 0em;
-  height: fit-content;
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  font-style: normal;
-  color: #ffffff;
-}
-@media screen and (max-width: 350px) {
-  header > h1 {
-    font-size: 3em;
-  }
-}
-@media screen and (min-width: 768px) {
-  header > h1 {
-    font-size: 3em;
-  }
-}
-@media screen and (min-width: 992px) {
-  header > h1 {
-    font-size: 3em;
-  }
-}
-@media screen and (min-width: 1200px) {
-  header > h1 {
-    font-size: 4em;
-  }
-}
-@media screen and (min-width: 1440px) {
-  header > h1 {
-    font-size: 5em;
-  }
-}
-
-nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
-nav .bar {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-end;
-  padding: 0em 1em 1em 1em;
-}
-nav a {
-  color: #ffffff;
-  text-decoration: none;
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 1em;
-  height: fit-content;
-  padding-bottom: 1em;
-  padding-top: 0em;
-}
-@media screen and (max-width: 350px) {
-  nav a {
-    font-size: 1.19em;
-    padding-top: 1em;
-  }
-}
-@media screen and (min-width: 768px) {
-  nav a {
-    font-size: 1em;
-    padding-top: 0px;
-  }
-}
-@media screen and (min-width: 992px) {
-  nav a {
-    font-size: 2em;
-    padding-top: 0px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  nav a {
-    font-size: 1.75em;
-    padding-top: 0px;
-  }
-}
-@media screen and (min-width: 1440px) {
-  nav a {
-    font-size: 2.5em;
-    padding-top: 1em;
   }
 }
 
@@ -291,7 +277,15 @@ nav a {
   justify-content: space-between;
   margin: 0% 10% 0% 10%;
 }
-@media screen and (max-width: 350px) {
+@media screen and (min-width: 350px) {
+  .content {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0% 5% 0% 5%;
+  }
+}
+@media screen and (min-width: 390px) {
   .content {
     flex-direction: column;
     justify-content: flex-start;
@@ -301,7 +295,7 @@ nav a {
 }
 @media screen and (min-width: 768px) {
   .content {
-    flex-direction: column-reverse;
+    flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     margin: 0% 5% 0% 5%;
@@ -311,7 +305,7 @@ nav a {
   .content {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     margin: 0% 5% 0% 5%;
   }
 }
@@ -321,8 +315,18 @@ nav a {
   justify-content: flex-start;
   align-items: flex-start;
 }
+@media screen and (min-width: 1200px) {
+  .content--contact {
+    flex-direction: row;
+  }
+}
 .content--proj {
   flex-direction: column;
+}
+@media screen and (min-width: 1200px) {
+  .content--proj {
+    flex-direction: row-reverse;
+  }
 }
 
 p {
@@ -331,9 +335,14 @@ p {
   font-style: normal;
   font-size: 1em;
 }
-@media screen and (max-width: 350px) {
+@media screen and (min-width: 350px) {
   p {
     font-size: 0.85em;
+  }
+}
+@media screen and (min-width: 390px) {
+  p {
+    font-size: 1.15em;
   }
 }
 @media screen and (min-width: 768px) {
@@ -354,20 +363,34 @@ p {
     padding-top: 0px;
   }
 }
-@media screen and (min-width: 1440px) {
-  p {
-    font-size: 1em;
-    padding-top: 1em;
-  }
-}
 
 #text {
   display: flex;
   flex-direction: row;
 }
+@media screen and (min-width: 390px) {
+  #text {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+@media screen and (min-width: 768px) {
+  #text {
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #text {
+    flex-direction: row-reverse;
+    margin-right: 2em;
+  }
+}
 
 #btn {
   margin-top: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
 img {
@@ -402,12 +425,20 @@ img {
   height: 3em;
   width: 10em;
 }
-@media screen and (max-width: 350px) {
+@media screen and (min-width: 350px) {
   .button--proj {
     font-size: 1em;
     height: fit-content;
     padding: 0.2em 0.5em 0.2em 0.5em;
     margin-bottom: 0.25em;
+  }
+}
+@media screen and (min-width: 390px) {
+  .button--proj {
+    font-size: 1em;
+    padding: 0.5em 0em 0.5em 0em;
+    margin-bottom: 0.75em;
+    max-width: 40vw;
   }
 }
 h3 {
@@ -417,10 +448,25 @@ h3 {
   margin-top: 1em;
   margin-bottom: 0em;
 }
+@media screen and (min-width: 768px) {
+  h3 {
+    font-size: 1.5em;
+  }
+}
 
 .icon {
   height: 10vh;
   color: #ff692d;
+}
+@media screen and (min-width: 390px) {
+  .icon {
+    height: 7vh;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .icon {
+    height: 10vh;
+  }
 }
 
 .content-column {
@@ -438,23 +484,47 @@ form {
   font-weight: 400;
   font-style: normal;
   font-size: 1em;
+  margin-left: 0.5em;
+}
+@media screen and (min-width: 768px) {
+  form {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+  }
+}
+@media screen and (min-width: 1200px) {
+  form {
+    font-size: 1em;
+    margin-left: 1em;
+  }
 }
 form label {
   margin: 0;
+}
+@media screen and (min-width: 390px) {
+  form label {
+    margin: 0.5em;
+  }
 }
 form input {
   margin: 0;
   height: 1em;
 }
+@media screen and (min-width: 390px) {
+  form input {
+    height: 1.5em;
+  }
+}
 form textarea {
-  width: 90%;
+  width: 80%;
   height: 40%;
 }
 form .button--submit {
   margin-top: 0.5em;
 }
 
-@media screen and (max-width: 350px) {
+@media screen and (min-width: 350px) {
   #proj-pic {
     max-height: 30vh;
     max-width: 80vw;
@@ -465,14 +535,47 @@ form .button--submit {
   flex-direction: column;
   align-items: flex-end;
 }
+@media screen and (min-width: 390px) {
+  #weblinks {
+    margin-top: 5em;
+  }
+}
+@media screen and (min-width: 768px) {
+  #weblinks {
+    margin-top: 2.5em;
+    margin-bottom: 1em;
+  }
+}
 
-@media screen and (max-width: 350px) {
+@media screen and (min-width: 350px) {
   #portrait {
     max-height: 40vh;
     max-width: 50vw;
   }
 }
+@media screen and (min-width: 390px) {
+  #portrait {
+    max-height: 50vh;
+    max-width: 60vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  #portrait {
+    max-height: 30vh;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #portrait {
+    margin-right: 3em;
+    max-width: 40vw;
+    max-height: 50vh;
+  }
+}
+
 footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   background-color: #ffffff;
   opacity: 0.5;
   margin-top: 0.25em;
@@ -483,6 +586,11 @@ footer {
 }
 footer p {
   margin: 0;
+}
+@media screen and (min-width: 390px) {
+  footer p {
+    font-size: 1em;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
